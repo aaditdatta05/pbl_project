@@ -1,0 +1,23 @@
+digraph Flowchart {
+	rankdir=TB size="8,10"
+	node [fontsize=12 shape=rectangle style=rounded]
+	start [label=Start]
+	upload [label="Upload Fundus Image"]
+	preprocess [label="Image Preprocessing
+(Resize, Normalize, Augment)"]
+	model [label="EfficientNet-B3 Model
+(Forward Pass - Regression)"]
+	grade [label="DR Severity Prediction
+(Grade 0–4)"]
+	gradcam [label="Grad-CAM Heatmap Generation"]
+	display [label="Display Results
+(Grade + Heatmap)"]
+	end [label=End]
+	start -> upload
+	upload -> preprocess
+	preprocess -> model
+	model -> grade
+	grade -> gradcam
+	gradcam -> display
+	display -> end
+}

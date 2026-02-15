@@ -1,0 +1,15 @@
+torch>=2.0
+torchvision
+timm
+albumentations
+opencv-python
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+streamlit
+opencv-contrib-python
+Pillow
+tqdm
+scipy
